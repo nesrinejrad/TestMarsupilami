@@ -1,0 +1,26 @@
+<h1 align="center"> Bienvenur ans votre espace</h1>
+<h3>Mes Infos</h3>
+<table>
+    {% for i in a%}
+        <tr>
+            <td>id</td><td>{{ i.id }}</td>
+        </tr>
+
+        <tr>
+            <td>Nom:</td><td>{{ i.nom }}</td>
+        </tr>
+        <tr>
+            <td>Ville:</td> <td>{{ i.ville}} </td>
+        </tr>
+        <tr>
+            <td>capacité:</td><td>{{ i.capacite}} </td>
+        </tr>
+        <tr>
+            <td>contact:</td><td>{{ i.contact}} </td>
+        </tr>
+        <td><a href="{{ path('Supp',{'id':i.id}) }}">supprimer ici</a> </td>
+        <td><a href="{{ path('Res',{'id':i.id}) }}">reserver ici</a> </td>
+
+    {% endfor %}
+
+</table>

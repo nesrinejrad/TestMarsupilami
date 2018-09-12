@@ -1,0 +1,21 @@
+<h1 align="center"> Bienvenur ans votre espace</h1>
+<h3 align="center">Mesinfos</h3>
+<table border="1" align="center">
+    <tr>
+        <td>id</td><td>race</td><td>famille</td><td>nouriture</td><td>age</td>
+        <td>Supprimer</td>
+    </tr>
+    {%  for i in m %}
+    <tr>
+        <td>{{ i.marsupilamiAmis.id}}</td>
+        <td>{{ i.marsupilamiAmis.race}}</td>
+        <td>{{ i.marsupilamiAmis.famille}}</td>
+        <td>{{ i.marsupilamiAmis.nourriture}}</td>
+        <td>{{ i.marsupilamiAmis.age}}</td>
+        <td><a href="{{ path('supp',{'id':i.marsupilamiAmis.id,'idUser':app.user.id}) }}">supprimer ici</a></td>
+
+        {%  endfor %}
+</table>
+<h3 align="center"><a href="{{ path('homepage',{'id':app.user.id}) }}">Consulter mes infos </a></h3>
+<h3 align="center"><a href="{{ path('listeMarsu',{'id':app.user.id}) }}">Ajouter des amis</a></h3>
+<h3 align="center"><a href="{{ path('fos_user_security_logout') }}">Deconnexion </a></h3>

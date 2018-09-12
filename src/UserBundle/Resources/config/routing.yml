@@ -1,0 +1,19 @@
+user_homepage:
+    path:     /Accueil
+    defaults: { _controller: UserBundle:Default:index }
+
+modif:
+    path:     /update/{id}
+    defaults: { _controller: UserBundle:Default:update }
+amis:
+    path:     /Amis/{id}
+    defaults: { _controller: UserBundle:Default:listeAmis }
+listeMarsu:
+    path:     /listeMarsu/{id}
+    defaults: { _controller: UserBundle:Default:listeMarsu }
+ajoutAmi:
+    path:     /AjoutAmi/{id}.{idUser}
+    defaults: { _controller: UserBundle:Default:ajoutAmi }
+supp:
+    path:     /suppAmi/{id}.{idUser}
+    defaults: { _controller: UserBundle:Default:suppAmi }

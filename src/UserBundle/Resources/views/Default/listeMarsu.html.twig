@@ -1,0 +1,22 @@
+<h1 align="center"> Bienvenue dans votre espace</h1>
+<h3 align="center">Liste des marsupilami</h3>
+<table border="2" align="center">
+    <tr>
+        <td>id</td><td>race</td><td>famille</td><td>nouriture</td><td>age</td>
+        <td>ajouter</td>
+    </tr>
+    {%  for i in m %}
+        <tr>
+            <td>{{ i.id}}</td>
+            <td>{{ i.race}}</td>
+            <td>{{ i.famille}}</td>
+            <td>{{ i.nourriture}}</td>
+            <td>{{ i.age}}</td>
+            <td><a href="{{ path('ajoutAmi',{'id':i.id,'idUser':app.user.id}) }}">ajouter ici</a></td>
+
+            {%  endfor %}
+        </tr>
+</table>
+<h3 align="center"><a href="{{ path('homepage',{'id':app.user.id}) }}">Consulter mes infos </a></h3>
+<h3 align="center"><a href="{{ path('listeMarsu',{'id':app.user.id}) }}">Ajouter des amis</a></h3>
+<h3 align="center"><a href="{{ path('fos_user_security_logout') }}">Deconnexion </a></h3>

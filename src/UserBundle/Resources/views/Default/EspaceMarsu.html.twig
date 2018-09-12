@@ -1,0 +1,20 @@
+<h1 align="center"> Bienvenur ans votre espace</h1>
+<h3 align="center">Mesinfos</h3>
+<table align="center">
+        <tr>
+            <td>age:</td><td>{{ app.user.age}}</td>
+        </tr>
+    <tr>
+        <td>race:</td><td>{{ app.user.race}}</td>
+    </tr>
+    <tr>
+        <td>famille:</td><td>{{ app.user.famille}}</td>
+    </tr>
+    <tr>
+        <td>nourriture:</td><td>{{ app.user.nourriture}}</td>
+    </tr>
+
+</table>
+<h3 align="center"><a href="{{ path('modif',{'id':app.user.id}) }}">Modifier mes infos </a></h3>
+<h3 align="center"><a href="{{ path('amis',{'id':app.user.id}) }}">Afficher mes amis </a></h3>
+<h3 align="center"><a href="{{ path('fos_user_security_logout') }}">Deconnexion </a></h3>
