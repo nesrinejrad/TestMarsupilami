@@ -1,0 +1,27 @@
+<h1>Modifier mes Info</h1>
+{{ form_start(f) }}
+<table>
+
+        <td>age</td>
+        <td>{{ form_widget(f.age) }}</td>
+    </tr>
+    <tr>
+        <td>famille</td>
+        <td>{{ form_widget(f.famille) }}</td>
+    </tr>
+    <tr>
+        <td>race</td>
+        <td>{{ form_widget(f.race) }}</td>
+    </tr>
+    <tr>
+        <td>nouriture</td>
+        <td>{{ form_widget(f.nourriture) }}</td>
+    </tr>
+    <tr>
+
+        <td>{{ form_widget(f.valider) }}</td>
+    </tr>
+</table>
+
+
+{{ form_end(f) }}
